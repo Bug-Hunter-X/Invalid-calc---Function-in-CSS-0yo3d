@@ -1,0 +1,25 @@
+To fix this, ensure that the units within the `calc()` function are compatible. For example, if adding values, ensure both are pixels or percentages. Or, if subtracting, similar unit consistency is required.  If you need to combine percentages and pixels, you may need to restructure your CSS to use different approaches, or break down calculations into multiple steps. 
+
+Example: 
+
+Incorrect:
+```css
+.element { width: calc(100% + 100px); }
+```
+
+Correct (using only percentages):
+```css
+.element { width: 150%; }
+```
+
+Correct (using variables for better readability and maintainability):
+```css
+:root {
+  --width-percentage: 100%;
+  --width-pixels: 100px;
+}
+
+.element { width: calc(var(--width-percentage) + var(--width-pixels)); }
+```
+
+Always double-check the syntax of your `calc()` expressions to avoid these types of errors.
