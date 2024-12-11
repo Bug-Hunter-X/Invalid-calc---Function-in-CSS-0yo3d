@@ -1,0 +1,1 @@
+The CSS code uses a `calc()` function with an invalid expression, such as `calc(100% + 100px)`.  This can happen when trying to add percentages and pixels directly, or if there's a syntax error within the `calc()` function itself.
